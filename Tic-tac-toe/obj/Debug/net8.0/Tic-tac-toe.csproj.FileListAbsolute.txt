@@ -1,0 +1,16 @@
+X:\C#\Tic-tac-toe\Tic-tac-toe\obj\Debug\net8.0\Tic-tac-toe.GeneratedMSBuildEditorConfig.editorconfig
+X:\C#\Tic-tac-toe\Tic-tac-toe\obj\Debug\net8.0\Tic-tac-toe.AssemblyInfoInputs.cache
+X:\C#\Tic-tac-toe\Tic-tac-toe\obj\Debug\net8.0\Tic-tac-toe.AssemblyInfo.cs
+X:\C#\Tic-tac-toe\Tic-tac-toe\obj\Debug\net8.0\Tic-tac-toe.csproj.CoreCompileInputs.cache
+X:\C#\Tic-tac-toe\Tic-tac-toe\bin\Debug\net8.0\Tic-tac-toe.exe
+X:\C#\Tic-tac-toe\Tic-tac-toe\bin\Debug\net8.0\Tic-tac-toe.deps.json
+X:\C#\Tic-tac-toe\Tic-tac-toe\bin\Debug\net8.0\Tic-tac-toe.runtimeconfig.json
+X:\C#\Tic-tac-toe\Tic-tac-toe\bin\Debug\net8.0\Tic-tac-toe.dll
+X:\C#\Tic-tac-toe\Tic-tac-toe\bin\Debug\net8.0\Tic-tac-toe.pdb
+X:\C#\Tic-tac-toe\Tic-tac-toe\obj\Debug\net8.0\Tic-tac-toe.dll
+X:\C#\Tic-tac-toe\Tic-tac-toe\obj\Debug\net8.0\refint\Tic-tac-toe.dll
+X:\C#\Tic-tac-toe\Tic-tac-toe\obj\Debug\net8.0\Tic-tac-toe.pdb
+X:\C#\Tic-tac-toe\Tic-tac-toe\obj\Debug\net8.0\Tic-tac-toe.genruntimeconfig.cache
+X:\C#\Tic-tac-toe\Tic-tac-toe\obj\Debug\net8.0\ref\Tic-tac-toe.dll
+X:\C#\Tic-tac-toe\Tic-tac-toe\bin\Debug\net8.0\Draw.txt
+X:\C#\Tic-tac-toe\Tic-tac-toe\bin\Debug\net8.0\Win.txt
