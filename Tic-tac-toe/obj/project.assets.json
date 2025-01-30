@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\C#\\Tic-tac-toe\\Tic-tac-toe\\Tic-tac-toe.csproj",
+      "projectUniqueName": "X:\\C#\\Tic-tac-toe\\console-game_TicTacToe\\Tic-tac-toe\\Tic-tac-toe.csproj",
       "projectName": "Tic-tac-toe",
-      "projectPath": "X:\\C#\\Tic-tac-toe\\Tic-tac-toe\\Tic-tac-toe.csproj",
+      "projectPath": "X:\\C#\\Tic-tac-toe\\console-game_TicTacToe\\Tic-tac-toe\\Tic-tac-toe.csproj",
       "packagesPath": "C:\\Users\\esofi\\.nuget\\packages\\",
-      "outputPath": "X:\\C#\\Tic-tac-toe\\Tic-tac-toe\\obj\\",
+      "outputPath": "X:\\C#\\Tic-tac-toe\\console-game_TicTacToe\\Tic-tac-toe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\esofi\\AppData\\Roaming\\NuGet\\NuGet.Config"
