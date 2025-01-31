@@ -1,8 +1,11 @@
-﻿namespace TicTacToe
+﻿using System.Runtime.InteropServices;
+
+namespace TicTacToe
 {
     class Program
     {
         static char currentPlayer = 'X';
+
         static void Main(string[] args)
         {
             ShowMenu();
@@ -20,8 +23,7 @@
                 Console.Clear();
                 Messages.DisplayWelcomeMessage();
 
-                Console.WriteLine("1 - PLAY \n" +
-                                  "2 - EXIT \n");
+                Console.WriteLine("1 - PLAY \n" + "2 - EXIT \n");
 
                 Console.Write("COMMAND: ");
                 string userInput = Console.ReadLine();
@@ -41,7 +43,7 @@
 
                     isWorking = false;
                 }
-                else 
+                else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("NOT CORRECT!");
@@ -55,7 +57,13 @@
 
         static void StartGame()
         {
-            Board board = new Board();
+            Dictionary<char, ConsoleColor> playerColors = new Dictionary<char, ConsoleColor>()
+            {
+                { 'X', ConsoleColor.Magenta }, 
+                { 'O', ConsoleColor.Blue }
+            };
+
+            Board board = new Board(playerColors);
 
             bool isPlaying = true;
 
@@ -64,22 +72,27 @@
                 Console.Clear();
                 board.DrawBoard();
 
-                PlayerInput(board);
-
+                var choice = PlayerInput(board, playerColors[currentPlayer]);
+                
+                board.PlaceMarker(choice, currentPlayer);
+                
                 if (board.CheckWin(currentPlayer))
                 {
                     Console.Clear();
                     board.DrawBoard();
 
                     Messages.DisplayWinMessage(currentPlayer);
+
                     break;
                 }
+
                 if (board.CheckDraw())
                 {
                     Console.Clear();
                     board.DrawBoard();
 
                     Messages.DisplayDrawMessage();
+
                     break;
                 }
 
@@ -87,29 +100,30 @@
             }
         }
 
-        public static void SetPlayerColor(char currentPlayer)
-        {
-            if (currentPlayer == 'X')
-                Console.ForegroundColor = ConsoleColor.Magenta;
-            else if (currentPlayer == 'O')
-                Console.ForegroundColor = ConsoleColor.Blue;
-            else
-                Console.ResetColor();
-        }
+        // public static void SetPlayerColor(char currentPlayer)
+        // {
+        //     if (currentPlayer == 'X')
+        //         Console.ForegroundColor = ConsoleColor.Magenta;
+        //     else if (currentPlayer == 'O')
+        //         Console.ForegroundColor = ConsoleColor.Blue;
+        //     else
+        //         Console.ResetColor();
+        // }
 
-        public static void PlayerInput(Board board)
+        public static int PlayerInput(Board board, ConsoleColor color)
         {
-            SetPlayerColor(currentPlayer);
             int choice;
-            Console.Write($"PLAYER {currentPlayer}. YOUR CHOICE (1-9): ");
+
+            Console.ForegroundColor = color;
+            Console.Write($"PLAYER {currentPlayer}. YOUR CHOICE (1-{board.Length}): ");
             Console.ResetColor();
 
-            while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 9 || !board.IsCellAvailable(choice))
+            while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > board.Length || !board.IsCellAvailable(choice))
             {
                 Console.WriteLine("NOT CORRECT!");
             }
 
-            board.PlaceMarker(choice, currentPlayer);
+            return choice;
         }
 
         public static void SwichPlayer()
